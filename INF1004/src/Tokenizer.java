@@ -9,7 +9,9 @@ public class Tokenizer
     {
         ArrayList<String> array_tokens = new ArrayList<String>();
 
-        StringTokenizer tokens = new StringTokenizer(expression, "\\s()/*-+$", true);
+        //le constructeur StringTokenizer sert a divise un String en token, il prend en
+        //parametre le string en question , le/les elements de division et l'inclusion des elenebts de divisions
+        StringTokenizer tokens = new StringTokenizer(expression, "()/*-+$", true);
 
         for (int i = 0; tokens.hasMoreTokens(); i++)
         {

@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-import static java.lang.Double.parseDouble;
-
 public class Evaluation
 {
     public static Double Post(ArrayList<String> express_evaluer)
@@ -14,7 +12,6 @@ public class Evaluation
         {
             if (s.equals("/") || s.equals("*") || s.equals("+") || s.equals("-") || s.equals("$"))
             {
-                System.out.println("operateur");
                 switch (s)
                 {
                     case "+" -> {
@@ -39,16 +36,12 @@ public class Evaluation
                     }
                     case "$" -> {
                         a = pile.pop();
-                        System.out.println(a);
                         pile.push(Math.sqrt(a));
-                        System.out.println("squareriit");
                     }
                 }
-            }
-            else
+            } else
             {
                 pile.push(Double.parseDouble(s));
-                System.out.println("operande");
             }
         }
         return pile.pop();

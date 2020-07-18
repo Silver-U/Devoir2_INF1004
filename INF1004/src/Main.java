@@ -1,7 +1,6 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.StringTokenizer;
+
 
 public class Main
 {
@@ -27,9 +26,9 @@ public class Main
         System.out.println("..............\n.................\nconversion termine.");
         System.out.println("Voici votre expression arithmetique en affichage postfixe :");
 
-        for (int i = 0; i < expression_arithmmetique_postfixe.size(); i++)
+        for (String s : expression_arithmmetique_postfixe)
         {
-            System.out.print(expression_arithmmetique_postfixe.get(i) +" ");
+            System.out.print(s + " ");
         }
 
         System.out.println();
