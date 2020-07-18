@@ -1,27 +1,27 @@
-public class Calcul_Arithmétique {
-
-    public double Addition (double a, double b)
+public class Calcul_Arithmétique
+{
+    public double auto(double operante1, double operante2, String operateur)
     {
-        return  a + b;
-    }
+        double result = 0;
 
-    public double Soustraction (double a, double b)
-    {
-        return a - b;
-    }
-
-    public double Multiplication (double a, double b)
-    {
-        return a * b;
-    }
-
-    public double Division (double a, double b)
-    {
-        return a / b;
-    }
-
-    public double Racine_carrée (double c)
-    {
-        return Math.sqrt(c);
+        switch (operateur)
+        {
+            case "/" :
+                result = operante1 / operante2;
+                break;
+            case "*" :
+                result = operante1 * operante2;
+                break;
+            case "-" :
+                result = operante1 - operante2;
+                break;
+            case "+" :
+                result = operante1 + operante2;
+                break;
+        }
+        return result;
     }
 }
+
+
+

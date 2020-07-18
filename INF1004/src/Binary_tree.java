@@ -1,19 +1,14 @@
 public class Binary_tree
 {
-    protected Node root;
-
-    public Binary_tree(String data)
-    {
-        root = null;
-    }
+    static Node root;
 
     public Node getRoot()
     {
         return root;
     }
 
-    public void setRoot(Node root)
+    public void setRoot(Node new_root)
     {
-        this.root = root;
+        root = new_root;
     }
 }

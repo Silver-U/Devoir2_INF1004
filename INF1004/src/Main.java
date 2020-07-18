@@ -20,12 +20,23 @@ public class Main
         //initialisation directe de notre arraylist avec les tokens issuent de l'expression arithmetique
         ArrayList<String> tokens_expression_arithmetique = new ArrayList<String>(Tokenizer.Tokens_transformation(expression_arithmetique));
 
-        //ordonancement des tokens dans l'arbre binaire
-        System.out.println(".......ordonnancement de l'expression arithmtique dans un arbre binaire.");
-        Binary_tree binary_tree_of_expression = Postfix.Transform(tokens_expression_arithmetique);
+        ArrayList<String> expression_arithmmetique_postfixe = new ArrayList<String>();
 
+        System.out.println("execution de la conversion de l'expression infixe en postfixe");
+        expression_arithmmetique_postfixe = Transform.Postfixe(tokens_expression_arithmetique);
+        System.out.println("..............\n.................\nconversion termine.");
+        System.out.println("Voici votre expression arithmetique en affichage postfixe :");
+
+        for (int i = 0; i < expression_arithmmetique_postfixe.size(); i++)
+        {
+            System.out.print(expression_arithmmetique_postfixe.get(i) +" ");
+        }
+
+        System.out.println();
         System.out.println("Execution de l'affichage postordre.....");
-        Postorder.Path(binary_tree_of_expression.getRoot());
         System.out.println("operation terminee voici votre expression arithmetique postfixe.");
+
+        System.out.println("Evaluation de l'expression postfixe......");
+        System.out.println("Le resultat de l'evaluation est:" + Evaluation.Post(expression_arithmmetique_postfixe));
     }
 }

@@ -8,23 +8,11 @@ public class Postorder
             Path (root.left_child);
             Path (root.right_child);
             System.out.println(root);
-            /*switch (root)
-            {
-                case "/" :
-                    break;
-                case "*" :
-                    break;
-                case "-" :
-                    break;
-                case "+" :
-                    break;
-                case "" :
-                    break;
-                case "/" :
-                    break;
 
-            }*/
 
+        }
+        else {
+            System.out.println("null");
         }
 
     }

@@ -1,10 +1,11 @@
 public class Node
 {
-    protected String data;
-    protected Node left_child;
-    protected Node right_child;
+    String data;
+    Node left_child;
+    Node right_child;
 
-    public Node (String data) {
+    public Node (String data)
+    {
         this.data = data;
         right_child = null;
         left_child = null;
@@ -13,7 +14,7 @@ public class Node
     //la methode add a pour objectif d'ajouter soit un enfant a guache soit un enfant a droite
     public void Add(String data, String child)
     {
-        Node current = new Node(""); Node parent = new Node(null), new_node = new Node(data);
+        Node current = new Node(""); Node parent = new Node(""), new_node = new Node(data);
 
         if (child.equals("left"))
         {
